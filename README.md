@@ -41,43 +41,48 @@ repositories {
 }
 ```
 
-step 2:
-    在使用module的build.gradle添加依赖
-    dependencies {
-        ...
-        implementation 'com.github.wjianchen13:SlideDemo:1.0.0'
-    }
-step 3：
-    在xml使用
-    <?xml version="1.0" encoding="utf-8"?>
-    <com.cold.library.SlideLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+step 2:在使用module的build.gradle添加依赖
+
+```Groovy
+dependencies {
+    ...
+    implementation 'com.github.wjianchen13:SlideDemo:1.0.0'
+}
+```
+
+step 3：在xml使用
+
+```Html
+<?xml version="1.0" encoding="utf-8"?>
+<com.cold.library.SlideLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/slide_layout"
+    android:layout_height="match_parent"
+    app:menu_gesture="false">
+
+    <RelativeLayout
+        android:id="@+id/rlyt_base"
         android:layout_width="match_parent"
-        android:id="@+id/slide_layout"
-        android:layout_height="match_parent"
-        app:menu_gesture="false">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/rlyt_base"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    </RelativeLayout>
 
-        </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlyt_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-        <RelativeLayout
-            android:id="@+id/rlyt_drawer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llyt_menu"
+        android:layout_width="200dp"
+        android:layout_height="match_parent">
 
-        </RelativeLayout>
-        <LinearLayout
-            android:id="@+id/llyt_menu"
-            android:layout_width="200dp"
-            android:layout_height="match_parent">
+    </LinearLayout>
 
-        </LinearLayout>
-
-    </com.cold.library.SlideLayout>
+</com.cold.library.SlideLayout>
+```
 
 ## license
 

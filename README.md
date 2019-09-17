@@ -31,14 +31,15 @@ https://www.jianshu.com/p/e4d1f88ca922<br>
 ![YY](./docs/images/demo.gif)
 
 ## 使用方法
-step 1：
-    在项目build.gradle添加JitPack 仓库
-    ```Groovy
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-    }
-    ```
+
+step 1：在项目build.gradle添加JitPack 仓库
+
+```Groovy
+repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+}
+```
 
 step 2:
     在使用module的build.gradle添加依赖

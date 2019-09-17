@@ -1,4 +1,7 @@
 # android仿YY直播间侧滑清屏功能
+
+[![](https://jitpack.io/v/wjianchen13/SlideDemo.svg)](https://jitpack.io/#wjianchen13/SlideDemo)
+
 ## 需求
 YY手机直播可以通过侧滑把直播间里的一些无关的元素清除，只显示视频区域和一些主要的显示信息，如图：
 
@@ -26,6 +29,54 @@ https://www.jianshu.com/p/e4d1f88ca922<br>
 具体实现效果如图：
 
 ![YY](./docs/images/demo.gif)
+
+## 使用方法
+step 1：
+    在项目build.gradle添加JitPack 仓库
+    ```Groovy
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+    ```
+
+step 2:
+    在使用module的build.gradle添加依赖
+    dependencies {
+        ...
+        implementation 'com.github.wjianchen13:SlideDemo:1.0.0'
+    }
+step 3：
+    在xml使用
+    <?xml version="1.0" encoding="utf-8"?>
+    <com.cold.library.SlideLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/slide_layout"
+        android:layout_height="match_parent"
+        app:menu_gesture="false">
+
+        <RelativeLayout
+            android:id="@+id/rlyt_base"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlyt_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/llyt_menu"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+
+    </com.cold.library.SlideLayout>
 
 ## license
 
